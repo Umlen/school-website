@@ -1,0 +1,20 @@
+.container {
+  background-color: #6D9EA3;
+  color: #ffffff;
+  padding: 2rem;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
+  text-align: center;
+
+  @media (min-width: 1280px) {
+    padding: 3rem;
+    background-color: unset;
+    box-shadow: none;
+    text-align: right;
+    width: 100%;
+    flex-grow: 1;
+    background-image: url(../assets/logo-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+  }
+}
