@@ -1,0 +1,25 @@
+.menuBtn {
+  cursor: pointer;
+  display: block;
+  padding: 1rem 1.5rem;
+  border-radius: 60px;
+  border: none;
+  color: inherit;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  line-height: 1.5em;
+  text-shadow: 0 0 1px #000000;
+  background-color: #6D9EA3;
+
+  @media (min-width: 1280px) {
+    border-radius: 0 60px 60px 0;
+    height: 100%;
+
+    &:hover {
+      opacity: .7;
+    }
+    &:active {
+      box-shadow: inset 3px 3px 5px rgba(0, 0, 0, .75);
+    }
+  }
+}
