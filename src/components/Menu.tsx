@@ -1,17 +1,23 @@
 import { FunctionComponent } from 'react';
 
 import styles from '../style/menu.module.scss';
-import stylesBtn from '../style/ui/buttons.module.scss';
 
 import { menu } from '../data/menu';
 
-import Button from './ui/Button';
+import MenuItem from './MenuItem';
 
 const Menu: FunctionComponent = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.menu}>
       {
-        menu.map((item, index) => <Button btnText={item} key={index} className={stylesBtn.menuBtn} />)
+        menu.map(menuItem => (
+            <MenuItem 
+              key={menuItem.id} 
+              text={menuItem.name} 
+              id={menuItem.id} 
+            />
+          )
+        )
       }
     </div>
   );
