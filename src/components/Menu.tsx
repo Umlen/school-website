@@ -10,11 +10,12 @@ const Menu: FunctionComponent = () => {
   return (
     <div className={styles.menu}>
       {
-        menu.map(menuItem => (
+        menu.map((menuItem, index) => (
             <MenuItem 
               key={menuItem.id} 
               text={menuItem.name} 
               id={menuItem.id} 
+              colorIndex={index}
             />
           )
         )

@@ -17,9 +17,10 @@
   transform: translate(-50%, -50%);
   padding: 2rem;
   border-radius: 25px;
-  box-shadow: 0 0 10px 3px rgba(0, 0, 0, .55);
-  background-color: #6D9EA3;
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, .35);
+  background-color: #D1D9DC;
   text-align: center;
+  color: #41635E;
 
   @media (min-width: 700px) {
     max-width: 650px;

@@ -1,26 +1,28 @@
 .container {
-  background-color: #6D9EA3;
   padding: 2rem;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
-  text-align: center;
+  background-image: url(../assets/logo-bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  text-align: right;
+
+  @media (min-width: 700px) {
+    background-image: url(../assets/logo-bg-tablet.png);
+  }
 
   @media (min-width: 1280px) {
     padding: 3rem;
-    background-color: unset;
-    box-shadow: none;
-    text-align: right;
-    width: 100%;
-    flex-grow: 1;
     background-image: url(../assets/logo-bg.png);
-    background-repeat: no-repeat;
     background-size: contain;
     background-position: top right;
   }
 }
 
 .text {
-  @media (min-width: 1280px) {
+  margin-left: auto;
+  max-width: 360px;
+
+  @media (min-width: 700px) {
     max-width: 550px;
-    margin-left: auto;
   }
 }

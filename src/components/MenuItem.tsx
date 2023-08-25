@@ -1,14 +1,18 @@
 import { FunctionComponent, useState } from 'react';
 
 import styles from '../style/menu.module.scss';
+
 import ModalWindow from './ui/ModalWindow';
+
+import { colors } from '../data/colors';
 
 type MenuItemProps = {
   id: string;
   text: string;
+  colorIndex: number;
 }
 
-const MenuItem: FunctionComponent<MenuItemProps> = ( {id, text} ) => {
+const MenuItem: FunctionComponent<MenuItemProps> = ( {id, text, colorIndex} ) => {
   const [isModalShown, setIsModalShown] = useState(false);
 
   function modalWindowToggler() {
@@ -26,6 +30,7 @@ const MenuItem: FunctionComponent<MenuItemProps> = ( {id, text} ) => {
           />
       }
       <div 
+        style={{backgroundColor: colors[colorIndex]}}
         className={styles.menuItem}
         onClick={modalWindowToggler}
       >
