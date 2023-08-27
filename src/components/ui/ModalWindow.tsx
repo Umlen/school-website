@@ -4,6 +4,10 @@ import styles from '../../style/ui/modal.module.scss';
 
 import closeBtn from '../../assets/close-btn.png';
 
+import { files } from '../../data/files';
+
+import FileButton from './FileButton';
+
 type ModalWindowProps = {
   id: string;
   title: string;
@@ -11,6 +15,8 @@ type ModalWindowProps = {
 };
 
 const ModalWindow: FunctionComponent<ModalWindowProps> = ( {id, title, togglerFunction} ) => {
+  const themeFiles = files.filter(file => file.themeId === id);
+
   return (
     <div className={styles.blackout}>
       <div className={styles.modalWindow}>
@@ -20,7 +26,16 @@ const ModalWindow: FunctionComponent<ModalWindowProps> = ( {id, title, togglerFu
           className={styles.closeBtn} 
           onClick={togglerFunction}
         />
-        <h3 className='mediumHeader'>{title}</h3>
+        <h3 className='mediumHeader marginBottom1em'>
+          {title}
+        </h3>
+        <div className={styles.filesWrapper}>
+          {
+            themeFiles.map((file) => (
+              <FileButton key={file.id} btnText={file.name} id={file.id} />
+            ))
+          }
+        </div>
       </div>
     </div>
   );
