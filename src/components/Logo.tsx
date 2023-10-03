@@ -6,7 +6,7 @@ const Logo: FunctionComponent = () => {
   return (
     <div className={styles.container}>
       <div className={styles.text}>
-        <h1 className='largeHeader marginBottom1em'>
+        <h1 className='largeHeader marginBottom1rem'>
           Методическое объединение
         </h1>
         <h2 className='mediumHeader'>

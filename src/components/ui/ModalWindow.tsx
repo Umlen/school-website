@@ -26,7 +26,7 @@ const ModalWindow: FunctionComponent<ModalWindowProps> = ( {id, title, togglerFu
           className={styles.closeBtn} 
           onClick={togglerFunction}
         />
-        <h3 className='mediumHeader marginBottom1em'>
+        <h3 className='mediumHeader marginBottom1rem'>
           {title}
         </h3>
         <div className={styles.filesWrapper}>
