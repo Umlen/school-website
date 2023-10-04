@@ -2,36 +2,24 @@ import { FunctionComponent } from 'react';
 
 import styles from '../../style/ui/modal.module.scss';
 
-/*interface for require.context*/
-
-declare interface NodeRequire {
-  context: (dir: string, includeSubdirs: boolean, filter: RegExp) => any;
-}
-declare var require: NodeRequire;
+import { FilesType } from '../../types/types';
 
 type FileButtonProps = {
-  btnText: string;
-  id: string;
+  file: FilesType;
 };
 
-const FileButton: FunctionComponent<FileButtonProps> = ( {btnText, id} ) => {
-  function importAllBtnImages(r: any) {
-    let images: any = {};
-    r.keys().map((item: any) => images[item.replace('./', '')] = r(item));
-    return images;
-  }
-
-  const images = importAllBtnImages(require.context('../../assets/fileBtn', false, /\.png/));
+const FileButton: FunctionComponent<FileButtonProps> = ( {file} ) => {
+  const {name, link} = file;
 
   return (
-    <div 
-      style={{backgroundImage: `url(${images[`f-${id}.png`]})`}}
-      className={styles.fileBtn}
+    <a 
+      href={link} 
+      className={styles.fileBtnText}
+      target='_blank'
+      rel='noreferrer'
     >
-      <p className={styles.fileBtnText}>
-        {btnText}
-      </p>
-    </div>
+      {name}
+    </a>
   );
 };
 

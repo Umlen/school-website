@@ -5,6 +5,7 @@ import styles from '../../style/ui/modal.module.scss';
 import closeBtn from '../../assets/close-btn.png';
 
 import { FilesType, ThemeType } from '../../types/types';
+import FileButton from './FileButton';
 
 type ModalWindowProps = {
   theme: ThemeType;
@@ -13,7 +14,6 @@ type ModalWindowProps = {
 
 const ModalWindow: FunctionComponent<ModalWindowProps> = ( {theme, togglerFunction} ) => {
   const [themeFiles, setThemeFiles] = useState<FilesType[]>([]);
-  const isSubThemes = theme.hasOwnProperty('subThemes');
 
   useEffect(() => {
     if (theme.subThemes) {
@@ -22,6 +22,13 @@ const ModalWindow: FunctionComponent<ModalWindowProps> = ( {theme, togglerFuncti
         setThemeFiles(theme.files);
     }
   }, []);
+
+  function subThemeHandler(id: string) {
+    if (theme.subThemes) {
+      const subTheme = theme.subThemes.find(theme => theme.id === id) || theme.subThemes[0];
+      setThemeFiles(subTheme.files);
+    }
+  }
 
   return (
     <div className={styles.blackout}>
@@ -33,15 +40,17 @@ const ModalWindow: FunctionComponent<ModalWindowProps> = ( {theme, togglerFuncti
           onClick={togglerFunction}
         />
         {
-          isSubThemes 
-            ? theme.subThemes?.map(subTheme => <p>{subTheme.name}</p>) 
+          theme.subThemes 
+            ? theme.subThemes.map(subTheme => 
+                <p onClick={() => subThemeHandler(subTheme.id)}>{subTheme.name}</p>
+              ) 
             : <h3 className='mediumHeader marginBottom1rem'>
                 {theme.name}
               </h3>
         }
         <div className={styles.filesWrapper}>
           {
-            themeFiles.map(file => <p>{file.name}</p>) 
+            themeFiles.map(file => <FileButton key={file.id} file={file} />) 
           }
         </div>
       </div>

@@ -30,9 +30,9 @@ export const themes = [
         name: 'Наставничество',
         files: [
           {
-            id: '',
-            name: '',
-            link: '',
+            id: '3-1-1',
+            name: '3-1-1',
+            link: './test',
           },
         ],
       },
@@ -41,9 +41,9 @@ export const themes = [
         name: 'Кураторство',
         files: [
           {
-            id: '',
-            name: '',
-            link: '',
+            id: '3-2-1',
+            name: '3-2-1',
+            link: './test',
           },
         ],
       },
@@ -132,9 +132,9 @@ export const themes = [
         name: 'Методические объединения классных руководителей',
         files: [
           {
-            id: '',
-            name: '',
-            link: '',
+            id: '8-1-1',
+            name: '8-1-1',
+            link: './test',
           },
         ],
       },
@@ -143,9 +143,9 @@ export const themes = [
         name: 'Методические объединенияучителей естественно-научного цикла',
         files: [
           {
-            id: '',
-            name: '',
-            link: '',
+            id: '8-2-1',
+            name: '8-2-1',
+            link: './test',
           },
         ],
       },
@@ -154,9 +154,9 @@ export const themes = [
         name: 'Методические объединения учителей ХЭЦ',
         files: [
           {
-            id: '',
-            name: '',
-            link: '',
+            id: '8-3-1',
+            name: '8-3-1',
+            link: './test',
           },
         ],
       },
@@ -165,9 +165,9 @@ export const themes = [
         name: 'Методические объединения учителей начальной школы',
         files: [
           {
-            id: '',
-            name: '',
-            link: '',
+            id: '8-4-1',
+            name: '8-4-1',
+            link: './test',
           },
         ],
       },
@@ -176,9 +176,9 @@ export const themes = [
         name: 'Методические объединения учителей гуманитарного цикла',
         files: [
           {
-            id: '',
-            name: '',
-            link: '',
+            id: '8-5-1',
+            name: '8-5-1',
+            link: './test',
           },
         ],
       },
