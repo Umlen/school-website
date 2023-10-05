@@ -6,7 +6,7 @@ import { colors } from '../data/colors';
 
 import { ThemeType } from '../types/types';
 
-import ModalWindow from './ui/ModalWindow';
+import ModalWindow from './modal/ModalWindow';
 
 type MenuItemProps = {
   theme: ThemeType;

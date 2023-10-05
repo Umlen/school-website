@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, .75);
 }
 
 .modalWindow {
@@ -16,11 +16,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 2rem;
-  border-radius: 25px;
-  box-shadow: 0 0 10px 3px rgba(255, 255, 255, .35);
+  border-radius: 15px;
+  box-shadow: 0 0 35px 5px rgba(0, 0, 0, .55);
   background-color: #D1D9DC;
   text-align: center;
-  color: #41635E;
+  color: #073b4c;
 
   @media (min-width: 700px) {
     max-width: 650px;
@@ -36,17 +36,13 @@
   margin-bottom: 1.5rem;
   top: 0;
   left: 100%;
-  width: 1rem;
   height: auto;
-
-  @media (min-width: 1280px) {
-    cursor: pointer;
-    width: 1.3rem;
-    transition: .2s linear;
-
-    &:hover {
-      transform: scale(1.5) rotate(90deg);
-    }
+  width: 2rem;
+  cursor: pointer;
+  transition: .2s linear;
+  
+  &:hover {
+    transform: scale(1.5) rotate(90deg);
   }
 }
 
@@ -62,29 +58,22 @@
   }
 }
 
-.fileBtn {
-  display: grid;
-  place-items: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 180px;
-  width: 100%;
+.fileButton {
+  font-size: 1.15rem;
+  letter-spacing: 1.1px;
+  line-height: 1.5em;
+  text-decoration: none;
+  background-color: #073b4c;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: .55em;
   transition: .2s linear;
-  cursor: pointer;
 
   &:hover {
     transform: scale(1.05);
   }
   &:active {
-    transform: scale(.9);
+    transform: scale(1);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, .75);
   }
-}
-
-.fileBtnText {
-  color: #ffffff;
-  text-shadow: 0 0 2px #000000;
-  font-size: 1.15rem;
-  letter-spacing: 1.1px;
-  line-height: 1.5em;
 }

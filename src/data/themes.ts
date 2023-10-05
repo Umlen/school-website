@@ -15,9 +15,9 @@ export const themes = [
     name: 'Программа методической работы',
     files: [
       {
-        id: '',
-        name: '',
-        link: '',
+        id: '2-1',
+        name: '2-1',
+        link: './test',
       },
     ],
   },
@@ -54,9 +54,9 @@ export const themes = [
     name: 'Полезные ресурсы для педагогов',
     files: [
       {
-        id: '',
-        name: '',
-        link: '',
+        id: '4-1',
+        name: '4-1',
+        link: './test',
       },
     ],
   },

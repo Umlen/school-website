@@ -1,11 +1,12 @@
 import { FunctionComponent, useEffect, useState } from 'react';
 
-import styles from '../../style/ui/modal.module.scss';
+import styles from '../../style/modal.module.scss';
 
 import closeBtn from '../../assets/close-btn.png';
 
 import { FilesType, ThemeType } from '../../types/types';
-import FileButton from './FileButton';
+
+import ModalButton from './ModalButton';
 
 type ModalWindowProps = {
   theme: ThemeType;
@@ -44,13 +45,13 @@ const ModalWindow: FunctionComponent<ModalWindowProps> = ( {theme, togglerFuncti
             ? theme.subThemes.map(subTheme => 
                 <p onClick={() => subThemeHandler(subTheme.id)}>{subTheme.name}</p>
               ) 
-            : <h3 className='mediumHeader marginBottom1rem'>
+            : <h3 className='mediumHeader marginBottom2rem'>
                 {theme.name}
               </h3>
         }
         <div className={styles.filesWrapper}>
           {
-            themeFiles.map(file => <FileButton key={file.id} file={file} />) 
+            themeFiles.map(file => <ModalButton key={file.id} file={file} />) 
           }
         </div>
       </div>

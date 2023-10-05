@@ -1,20 +1,20 @@
 import { FunctionComponent } from 'react';
 
-import styles from '../../style/ui/modal.module.scss';
+import styles from '../../style/modal.module.scss';
 
 import { FilesType } from '../../types/types';
 
-type FileButtonProps = {
+type ModalButtonProps = {
   file: FilesType;
 };
 
-const FileButton: FunctionComponent<FileButtonProps> = ( {file} ) => {
+const ModalButton: FunctionComponent<ModalButtonProps> = ( {file} ) => {
   const {name, link} = file;
 
   return (
     <a 
       href={link} 
-      className={styles.fileBtnText}
+      className={styles.fileButton}
       target='_blank'
       rel='noreferrer'
     >
@@ -23,4 +23,4 @@ const FileButton: FunctionComponent<FileButtonProps> = ( {file} ) => {
   );
 };
 
-export default FileButton;
+export default ModalButton;
