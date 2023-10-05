@@ -12,14 +12,16 @@ const ModalButton: FunctionComponent<ModalButtonProps> = ( {file} ) => {
   const {name, link} = file;
 
   return (
-    <a 
-      href={link} 
-      className={styles.fileButton}
-      target='_blank'
-      rel='noreferrer'
-    >
-      {name}
-    </a>
+    <div className={styles.fileButton}>
+      <a 
+        href={link} 
+        className={styles.fileButtonLink}
+        target='_blank'
+        rel='noreferrer'
+      >
+        {name}
+      </a>
+    </div>
   );
 };
 

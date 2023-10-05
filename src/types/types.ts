@@ -5,7 +5,7 @@ export type ThemeType = {
   files?: FilesType[];
 };
 
-type SubThemesType = {
+export type SubThemesType = {
   id: string;
   name: string;
   files: FilesType[];

@@ -7,6 +7,7 @@ import closeBtn from '../../assets/close-btn.png';
 import { FilesType, ThemeType } from '../../types/types';
 
 import ModalButton from './ModalButton';
+import ModalMenu from './ModalMenu';
 
 type ModalWindowProps = {
   theme: ThemeType;
@@ -22,7 +23,7 @@ const ModalWindow: FunctionComponent<ModalWindowProps> = ( {theme, togglerFuncti
     } else if (theme.files) {
         setThemeFiles(theme.files);
     }
-  }, []);
+  }, [theme.subThemes, theme.files]);
 
   function subThemeHandler(id: string) {
     if (theme.subThemes) {
@@ -42,9 +43,7 @@ const ModalWindow: FunctionComponent<ModalWindowProps> = ( {theme, togglerFuncti
         />
         {
           theme.subThemes 
-            ? theme.subThemes.map(subTheme => 
-                <p onClick={() => subThemeHandler(subTheme.id)}>{subTheme.name}</p>
-              ) 
+            ? <ModalMenu subThemes={theme.subThemes} menuItemHandler={subThemeHandler} />
             : <h3 className='mediumHeader marginBottom2rem'>
                 {theme.name}
               </h3>

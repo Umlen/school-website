@@ -11,7 +11,7 @@ import ModalWindow from './modal/ModalWindow';
 type MenuItemProps = {
   theme: ThemeType;
   colorIndex: number;
-}
+};
 
 const MenuItem: FunctionComponent<MenuItemProps> = ( {theme, colorIndex} ) => {
   const [isModalShown, setIsModalShown] = useState(false);
