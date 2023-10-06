@@ -110,6 +110,16 @@ export const themes = [
         name: 'Кроссворд Числовые выражения Самсонова',
         link: './files/6-kopilka/krossvord-chislovye-vyrazheniya-samsonova.pdf',
       },
+      {
+        id: '6-6',
+        name: 'Дневник речевого наблюдения как средство развития коммуникативной компетентности обучающихся',
+        link: './files/6-kopilka/kornienko-iv-k-seminaru-19-04-19.pdf',
+      },
+      {
+        id: '6-7',
+        name: 'Эффективные образовательные практики реализации',
+        link: './files/6-kopilka/kornienko-iv-effektivnye-obrazovatelnye-praktiki-realizacii.pdf',
+      },
     ],
   },
   {
@@ -120,6 +130,16 @@ export const themes = [
         id: '7-1',
         name: 'Технологическая карта урока математики с включением заданий формата PISA на развитие математической грамотности',
         link: './files/7-otkritie/tekhnologicheskaya-karta-uroka-matematiki-s-vklyucheniem-zadanij-formata-pisa-na-razvitie-matematicheskoj-gramotnosti.pdf',
+      },
+      {
+        id: '7-2',
+        name: 'Урок русского языка в 1 классе',
+        link: './files/7-otkritie/rodina-tg-russkij-yazyk-1b-klass.pdf',
+      },
+      {
+        id: '7-3',
+        name: 'Коммуникативные стратегии как средство понимания текста',
+        link: './files/7-otkritie/titova-og-10-klass-19-04-2023.pdf',
       },
     ],
   },
