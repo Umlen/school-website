@@ -20,7 +20,20 @@
   box-shadow: 0 0 35px 5px rgba(0, 0, 0, .55);
   background-color: #D1D9DC;
   text-align: center;
-  color: #073b4c;
+  color: #073B4C;
+  max-height: 90%;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    background-color: #D1D9DC;
+    border-radius: 0 15px 15px 0;
+    height: 100%;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #073B4C;
+    border-radius: 15px;
+  }
+  scrollbar-color: #073B4C #D1D9DC;
 
   @media (min-width: 700px) {
     max-width: 650px;
@@ -51,7 +64,7 @@
   grid-template-columns: 1fr;
   gap: 1rem;
   padding-bottom: 2rem;
-  border-bottom: 2px solid #073b4c;
+  border-bottom: 2px solid #073B4C;
   margin-bottom: 2rem;
 
   @media (min-width: 700px) {
@@ -65,7 +78,7 @@
   line-height: 1.5em;
   font-weight: 700;
   padding: .25rem;
-  border: 1px solid #073b4c;
+  border: 1px solid #073B4C;
   border-radius: 8px;
   display: grid;
   place-items: center;
@@ -93,7 +106,7 @@
 
 .fileButton {
   cursor: pointer;
-  background-color: #073b4c;
+  background-color: #073B4C;
   border-radius: 8px;
   padding: .55em;
   transition: .2s linear;
