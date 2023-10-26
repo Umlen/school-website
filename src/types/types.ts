@@ -1,18 +1,18 @@
-export type ThemeType = {
+export interface ThemeType {
   id: string;
   name: string;
   subThemes?: SubThemesType[];
   files?: FilesType[];
-};
+}
 
-export type SubThemesType = {
+export interface SubThemesType {
   id: string;
   name: string;
   files: FilesType[];
-};
+}
 
-export type FilesType = {
+export interface FilesType {
   id: string;
   name: string;
   link: string;
-};
+}

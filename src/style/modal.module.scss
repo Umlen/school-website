@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .75);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .modalWindow {
@@ -17,23 +17,23 @@
   transform: translate(-50%, -50%);
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 0 35px 5px rgba(0, 0, 0, .55);
-  background-color: #D1D9DC;
+  box-shadow: 0 0 35px 5px rgba(0, 0, 0, 0.55);
+  background-color: #d1d9dc;
   text-align: center;
-  color: #073B4C;
+  color: #073b4c;
   max-height: 90%;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   &::-webkit-scrollbar {
-    background-color: #D1D9DC;
+    background-color: #d1d9dc;
     border-radius: 0 15px 15px 0;
     height: 100%;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: #073B4C;
+    background-color: #073b4c;
     border-radius: 15px;
   }
-  scrollbar-color: #073B4C #D1D9DC;
+  scrollbar-color: #073b4c #d1d9dc;
 
   @media (min-width: 700px) {
     max-width: 650px;
@@ -52,8 +52,8 @@
   height: auto;
   width: 2rem;
   cursor: pointer;
-  transition: .2s linear;
-  
+  transition: 0.2s linear;
+
   &:hover {
     transform: scale(1.5) rotate(90deg);
   }
@@ -64,7 +64,7 @@
   grid-template-columns: 1fr;
   gap: 1rem;
   padding-bottom: 2rem;
-  border-bottom: 2px solid #073B4C;
+  border-bottom: 2px solid #073b4c;
   margin-bottom: 2rem;
 
   @media (min-width: 700px) {
@@ -77,19 +77,19 @@
   letter-spacing: 1.2px;
   line-height: 1.5em;
   font-weight: 700;
-  padding: .25rem;
-  border: 1px solid #073B4C;
+  padding: 0.25rem;
+  border: 1px solid #073b4c;
   border-radius: 8px;
   display: grid;
   place-items: center;
-  transition: .1s linear;
+  transition: 0.1s linear;
 
   &:hover {
     border-color: #ffffff;
     background-color: #ffffff;
   }
   &:active {
-    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, .35);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.35);
   }
 }
 
@@ -106,10 +106,10 @@
 
 .fileButton {
   cursor: pointer;
-  background-color: #073B4C;
+  background-color: #073b4c;
   border-radius: 8px;
-  padding: .55em;
-  transition: .2s linear;
+  padding: 0.55em;
+  transition: 0.2s linear;
   display: grid;
   place-items: center;
 
@@ -118,7 +118,7 @@
   }
   &:active {
     transform: scale(1);
-    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, .75);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.75);
   }
 }
 

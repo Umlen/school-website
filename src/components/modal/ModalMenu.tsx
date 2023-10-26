@@ -1,28 +1,28 @@
-import { FunctionComponent } from 'react';
-
+import { type FunctionComponent } from 'react';
+import { type SubThemesType } from '../../types/types';
 import styles from '../../style/modal.module.scss';
 
-import { SubThemesType } from '../../types/types';
-
-type ModalMenuProps = {
+interface ModalMenuProps {
   subThemes: SubThemesType[];
   menuItemHandler: (id: string) => void;
-};
+}
 
-const ModalMenu: FunctionComponent<ModalMenuProps> = ( {subThemes, menuItemHandler} ) => {
+const ModalMenu: FunctionComponent<ModalMenuProps> = (props) => {
+  const { subThemes, menuItemHandler } = props;
+
   return (
     <div className={styles.modalMenu}>
-      {
-        subThemes.map(subTheme => 
-          <p 
-            key={subTheme.id}
-            onClick={() => menuItemHandler(subTheme.id)}
-            className={styles.modalMenuItem}
-          >
-            {subTheme.name}
-          </p>
-        ) 
-      }
+      {subThemes.map((subTheme) => (
+        <p
+          key={subTheme.id}
+          onClick={() => {
+            menuItemHandler(subTheme.id);
+          }}
+          className={styles.modalMenuItem}
+        >
+          {subTheme.name}
+        </p>
+      ))}
     </div>
   );
 };
