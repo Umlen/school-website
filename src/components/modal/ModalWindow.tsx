@@ -17,7 +17,7 @@ const ModalWindow: FunctionComponent<ModalWindowProps> = ({
   const [themeFiles, setThemeFiles] = useState<FilesType[]>([]);
 
   useEffect(() => {
-    if (theme.subThemes != null) {
+    if (theme.subThemes.length !== 0) {
       setThemeFiles(theme.subThemes[0].files);
     } else if (theme.files != null) {
       setThemeFiles(theme.files);
@@ -25,8 +25,8 @@ const ModalWindow: FunctionComponent<ModalWindowProps> = ({
   }, [theme.subThemes, theme.files]);
 
   function subThemeHandler(id: string): void {
-    if (theme.subThemes != null) {
-      const subTheme = theme.subThemes.filter((theme) => theme.id === id)[0];
+    if (theme.subThemes.length !== 0) {
+      const subTheme = theme.subThemes.filter((theme) => theme._id === id)[0];
       setThemeFiles(subTheme.files);
     }
   }
@@ -40,7 +40,7 @@ const ModalWindow: FunctionComponent<ModalWindowProps> = ({
           className={styles.closeBtn}
           onClick={togglerFunction}
         />
-        {theme.subThemes != null ? (
+        {theme.subThemes.length !== 0 ? (
           <ModalMenu
             subThemes={theme.subThemes}
             menuItemHandler={subThemeHandler}
@@ -50,7 +50,7 @@ const ModalWindow: FunctionComponent<ModalWindowProps> = ({
         )}
         <div className={styles.filesWrapper}>
           {themeFiles.map((file) => (
-            <ModalButton key={file.id} file={file} />
+            <ModalButton key={file._id} file={file} />
           ))}
         </div>
       </div>

@@ -14,9 +14,9 @@ const ModalMenu: FunctionComponent<ModalMenuProps> = (props) => {
     <div className={styles.modalMenu}>
       {subThemes.map((subTheme) => (
         <p
-          key={subTheme.id}
+          key={subTheme._id}
           onClick={() => {
-            menuItemHandler(subTheme.id);
+            menuItemHandler(subTheme._id);
           }}
           className={styles.modalMenuItem}
         >

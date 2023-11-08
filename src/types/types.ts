@@ -1,18 +1,18 @@
 export interface ThemeType {
-  id: string;
+  _id: string;
   name: string;
-  subThemes?: SubThemesType[];
-  files?: FilesType[];
+  subThemes: SubThemesType[];
+  files: FilesType[];
 }
 
 export interface SubThemesType {
-  id: string;
+  _id: string;
   name: string;
   files: FilesType[];
 }
 
 export interface FilesType {
-  id: string;
+  _id: string;
   name: string;
   link: string;
 }
