@@ -76,6 +76,7 @@
       "react-app-env.d.ts"
     ],
     "rules": {
+      "@typescript-eslint/strict-boolean-expressions": "off",
       "prettier/prettier": [
         "warn",
         {
